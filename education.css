@@ -1,0 +1,214 @@
+*{
+    font-family: 'Poppins', sans-serif;
+    margin:0; 
+    padding:0;
+    box-sizing: border-box;
+    outline: none; 
+    border:none;
+    text-transform: capitalize;
+}
+
+
+body{
+    overflow-x: hidden;
+    background-color: #345ca5;
+
+}
+.main-width{
+    width: 1280px;
+    max-width: 95%;
+    margin: 0 auto;
+    padding: 0px 20px;
+}
+
+.hero{
+    width: 100%;
+    height: 100%;
+    background-color: #345ca5;
+}
+header{
+    padding: 40px 0 30px;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo a{
+    text-decoration: none;
+}
+.logo i{
+    height: 65px;
+    width: 65px;
+    background: transparent;
+    border: 3px solid #88b1ff;
+    color: #88b1ff;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+nav .nav-list{
+    list-style: none;
+}
+nav .nav-list li{
+    display: inline-block;
+}
+nav .nav-list li a{
+    display: inline-block;
+    color: #eee;
+    margin-left: 55px;
+    font-size: 20px;
+    font-weight: 400;
+    text-decoration: none;
+}
+nav .nav-list li:not(:last-child) a:hover{
+    color: #88b1ff;
+    transition: .4s;
+}
+nav .nav-list li.btn a{
+    display: inline-block;
+    background: transparent;
+    border: 2px solid #88b1ff;
+    padding: 9px 28px;
+    border-radius: 30px;
+    line-height: 1.3;
+    color: #88b1ff;
+    font-weight: 500
+}
+nav .nav-list li.btn:hover a{
+    background: #88b1ff;
+    color: white;
+    border: 2px transparent;
+    transition: .4s;
+}
+
+
+.heading{
+    text-align: center;
+    font-size: 3rem;
+    color:#fff;
+    text-transform: uppercase;
+}
+
+.heading span{
+    color:#88b1ff;
+    text-transform: uppercase;
+}
+
+.box-container{
+    display: flex;
+    align-items: baseline;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding: 1rem 3rem;
+    padding-left: 3rem;
+}
+
+.box-container .box{
+    width:27rem;
+    margin:4rem 1rem;
+    padding-left: 4rem;
+    border-left: .2rem solid #fff;
+    position: relative;
+}
+
+.box-container .box span{
+    font-size: 1.3rem;
+    background:#538fff;
+    color:#fff;
+    border-radius: 5rem;
+    padding:.5rem 2.5rem;
+}
+
+.box-container .box h3{
+    font-size: 2rem;
+    color:#fff;
+    padding-top: 1.5rem;
+    text-transform: none;
+}
+
+.box-container .box p{
+    font-size: 1.4rem;
+    color:#eee;
+    padding: 1rem 0;
+    text-transform: none;
+}
+
+.box-container .box i{
+    position: absolute;
+    top:-1.5rem; left:-2.5rem;
+    height:5rem;
+    width: 5rem;
+    border-radius: 50%;
+    line-height: 5rem;
+    text-align: center;
+    font-size: 2rem;
+    color:black;
+    background: #88b1ff;
+}
+
+label #btn, label #cancel{
+    color: white;
+    font-size: 30px;
+    float: right;
+    line-height: 80px;
+    margin-right: 10px;
+    cursor: pointer;
+    display: none;
+}
+#check{
+    display: none;
+}
+
+@media (max-width: 930px){
+    label #btn{
+        display: initial;
+    }
+    nav .nav-list{
+        position:absolute;
+        top: 100px;
+        right: -65%;
+        bottom: 0;
+        width: 35%;
+        height: 50%;
+        background: rgba(0, 0, 0, 0.575);
+        z-index: 2;
+        padding: 6% 9%;
+        transition: .3s right;
+        border-radius: 10px;
+    }
+    nav .nav-list li{
+        display: block;
+    }
+    nav .nav-list li a{
+        display: block;
+        text-align: center;
+        font-size: 18px;
+        font-weight: 400;
+        margin-left: 0;
+        margin-bottom: 30px;
+    }
+    nav .nav-list li.btn a{
+        position: absolute;
+        bottom: 0%;
+        right: 20%;
+        left: 20%;
+        padding: 7px 15px;
+        font-size: 2.8vw;
+        margin-bottom: 35px;
+        
+    }
+    #check:checked ~ ul{
+        right: 0;
+        transition: .5s;
+    }
+    #check:checked ~ label #btn{
+        display: none;
+    }
+    #check:checked ~ label #cancel{
+        display: block;
+    }
+}
